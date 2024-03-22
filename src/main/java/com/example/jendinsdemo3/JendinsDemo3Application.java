@@ -16,11 +16,19 @@ public class JendinsDemo3Application {
 
 	@GetMapping("/hello")
 	public String hello() {
+		System.out.println("/hello");
 		return "Hello DK";
 	}
 
 	@PostMapping("/hi")
 	public String hi() {
+		System.out.println("/hi");
 		return "Hi DK";
+	}
+
+	@GetMapping("/wow")
+	public String wow() {
+		System.out.println("/wow");
+		return "wow DK";
 	}
 }
