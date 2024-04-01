@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
+
 @SpringBootApplication
 @RestController
 public class JendinsDemo3Application {
@@ -30,5 +32,12 @@ public class JendinsDemo3Application {
 	public String wow() {
 		System.out.println("/wow");
 		return "wow DK";
+	}
+
+	@GetMapping("/date")
+	public String date() {
+		System.out.println("/date");
+		Date now = new Date();
+		return now.toString();
 	}
 }
